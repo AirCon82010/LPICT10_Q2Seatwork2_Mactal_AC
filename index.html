@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>Student Grade Calculator</title>
+    <style>
+    body {
+        background: #fbffc8;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding-top: 30px;s
+    }
+
+    #bigbox {
+        background-color: #ffffff;
+        border: 3px solid #000000;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        width: 800px;
+        padding: 30px 25px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #5b7c99;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+
+    label {
+        background-color: #FFF0CB;
+        color: #000000;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+
+    input {
+        border: 2px solid #000000;
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-size: 15px;
+        width: 100%;
+        margin-bottom: 12px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+        border-color: #3a4dbf;
+        box-shadow: 0 0 6px rgba(58, 77, 191, 0.3);
+    }
+
+    .subj {
+        width: 45%;
+        display: inline-block;
+    }
+
+    .sub {
+        width: 100px;
+    }
+
+    button {
+        width: 100%;
+        background: linear-gradient(90deg, #5b7c99, #8aa7cc);
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 10px 0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        background: linear-gradient(90deg, #4c58d9, #6a7bff);
+        transform: scale(1.03);
+    }
+
+    #name {
+        background: #a5b2f5;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    #grades {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        background-color: #f0f4ff;
+        border: 2px solid #000000;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    #average {
+        background-color: #acec82;
+        color: #2a2d70;
+        padding: 12px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-top: 15px;
+    }
+</style>
+
+</head>
+<body>
+<div class="container" id="bigbox">
+        <h2>Student Grade Calculator</h2>
+<br>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" placeholder="Type Here">
+<br><br>
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" placeholder="Type Here">
+
+
+<br><br>
+    <h4>Enter your grades:</h4>
+<br>
+
+    <div class="container col-md-12">
+
+    <label for="sci" class="sub">Science:</label>
+    <input type="number" id="sci" placeholder="Grade" class="subj">
+    <br>
+    <label for="math" class="sub">Math:</label>
+    <input type="number" id="math" placeholder="Grade" class="subj">
+    <br>  
+    <label for="eng" class="sub">English:</label>
+    <input type="number" id="eng" placeholder="Grade" class="subj">
+    <br>
+    <label for="fil" class="sub">Filipino:</label>
+    <input type="number" id="fil" placeholder="Grade" class="subj">
+    <br>
+    <label for="tle" class="sub">TLE:</label>
+    <input type="number" id="tle" placeholder="Grade" class="subj">
+    <br>
+    <label for="pe" class="sub">PE:</label>
+    <input type="number" id="pe" placeholder="Grade" class="subj">
+    </div>
+<br>
+
+    <button class="col-md-12" id="calculateBtn" py-click="print_grade">Calculate</button>
+
+<br><br>
+    <h4 id="name"></h4>
+    <p id="grades"></p>
+    <h4 id="average" ></h4>
+
+</div>
+
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
